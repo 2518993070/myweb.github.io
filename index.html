@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介绍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: auto; /* 允许滚动 */
+        }
+
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1; /* 设置为最底层 */
+        }
+
+        header {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #053e32;
+            font-size: 100px;
+            letter-spacing: 20px;
+            z-index: 2;
+        }
+
+        article {
+            background-color: rgba(255, 255, 255, 0.48); /* 半透明背景 */
+            color: #053e32; /* 文字颜色 */
+            position: relative;
+            height: auto; /* 自适应高度 */
+            width: 100%;
+            padding: 20px; /* 添加内边距 */
+            z-index: 2; /* 设置为上层 */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 居中对齐 */
+        }
+
+        article p {
+            font-size: 1.8em; /* 调整段落字体大小 */
+            margin: 10px 0;
+            color: #053e32; /* 字体颜色 */
+        }
+
+        img {
+            width: 150px;
+            height: 200px;
+            border-radius: 75px;
+            transition: transform 0.2s;
+            border: 3px solid #2e2502; /* 照片边框 */
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(51, 41, 2, 0.221);
+        }
+
+        .hobby-img {
+            width: 150px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .hobby-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        a {
+            color: #00bcd4; /* 链接颜色 */
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ff5722; /* 链接悬停颜色 */
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 15px 25px;
+            background-color: #00bcd4; /* 按钮颜色 */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0097a7; /* 按钮悬停颜色 */
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop controls>
+        <source src="cats.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+    <header>自我介绍</header>
+    <article>
+        <img src="me.jpg" alt="This is me">
+        <p>姓名: 纪卓妍</p>
+        <p><strong>年龄:</strong> 19岁</p>
+        <p><strong>就读院校:</strong> 北京理工大学</p>
+        <p><strong>爱好:</strong></p>
+        <div>
+            <img class="hobby-img" src="h1.jpg" alt="舞蹈">
+            <img class="hobby-img" src="h2.jpg" alt="游泳">
+            <img class="hobby-img" src="h3.jpg" alt="撸猫！">
+        </div>
+        <p><strong>我喜欢的书籍:</strong></p>
+        <p><a href="https://baike.baidu.com/item/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/19497203?fr=ge_ala" target="_blank">《我与地坛》</a></p>
+        <p><a href="https://baike.baidu.com/item/%E7%8C%AB%E6%AD%A6%E5%A3%AB/4739018?fr=ge_ala" target="_blank">《猫武士》</a></p>
+        <button class="button" onclick="alert('1120231502号程序猿为您服务！')">联系我</button>
+    </article>
+</body>
+
+</html>
